@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Complaint Portal</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+
+<body>
+    <!---------------TopBar---------------------------------->
+    <header class="topbar">
+        <div class="topbar-left">
+            <button type="button" class="menu-btn" id="menuBtn">☰</button>
+            <h3 class="logo">📋 Complaint Portal</h3>
+        </div>
+        <div class="user-box">
+            <div class="avatar" id="avatar">S</div>
+            <span id="userName">Student</span>
+        </div>
+    </header>
+
+    <div class="layout">
+        <!--------------------SideBar------------------------------------->
+        <aside class="sidebar" id="sidebar">
+            <a href="student_dashboard.html" class="menu-item active">🏠 Dashboard</a>
+            <a href="add_complaint.html" class="menu-item">✍️ New Complaint</a>
+            <a href="my_complaints.html" class="menu-item">📄 My Complaints</a>
+            <a href="login.html" class="menu-item logout">🚪 Logout</a>
+        </aside>
+        <!-----------------------MainContent------------------------------------------>
+        <main class="main-content">
+            <!-------------------PageHead--------------------------------------->
+            <div class="page-head">
+                <div>
+                    <h1><span id="greeting">Hello</span> ,<span id="student-name">Student</span>👋</h1>
+                    <p class="subtitle">A quick overview of your complaints</p>
+                </div>
+                <a href="new_complaint.html"> + New Complaint</a>
+            </div>
+            <!---------------------Status----------------------------------------------->
+            <section class="status">
+                <div class="status-card">
+                    <div class="icon blue">📋</div>
+                    <div class="total">
+                        <h1><span>5</span></h1>
+                        <p>Total</p>
+                    </div>
+                </div>
+                <div class="status-card">
+                    <div class="icon  orange">⏳</div>
+                    <div class="pending">
+                        <h1><span>2</span></h1>
+                        <p>Pending</p>
+                    </div>
+                </div>
+                <div class="status-card">
+                    <div class="icon sky">🔧</div>
+                    <div class="progress">
+                        <h1><span>1</span></h1>
+                        <p>In Progress</p>
+                    </div>
+                </div>
+                <div class="status-card">
+                    <div class="icon green">✅</div>
+                    <div class="resolved">
+                        <h1><span>2</span></h1>
+                        <p>Resolved</p>
+                    </div>
+                </div>
+            </section>
+            <!--------------------RecentComplaintTable------------------------------>
+            <section class="recent_complaint">
+                <div class="table-head">
+                    <h2><span>Recent Complaints</span></h2>
+                    <a href="my_complaint.html">View all →</a>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#105</td>
+                                <td>Fan not working</td>
+                                <td>Classroom</td>
+                                <td>22 Oct 2026</td>
+                                <td><span class="pill pill-pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#102</td>
+                                <td>Projector not clear</td>
+                                <td>Lab</td>
+                                <td>18 Oct 2026</td>
+                                <td><span class="pill pill-progress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>#098</td>
+                                <td>Books not available</td>
+                                <td>Library</td>
+                                <td>10 Oct 2026</td>
+                                <td><span class="pill pill-resolved">Resolved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="JS/dashboard.js"></script>
+</body>
+
+</html>
